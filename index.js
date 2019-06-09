@@ -3,6 +3,10 @@ const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
 const ytSearch = Promise.promisify(require('youtube-search'));
 const client = new Discord.Client();
+
+const dotenv = require('dotenv');
+dotenv.config();
+
 const discordToken = process.env['DISCORD_TOKEN'];
 const youtubeAPIKey = process.env['YOUTUBE_API_KEY'];
 let stream;
